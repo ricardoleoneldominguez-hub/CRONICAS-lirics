@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desde Siempre Desde el Principio — Letra | Crónicas del Anáhuac · RLD ENSEMBLE</title>
-  <meta name="description" content="Letra de Desde Siempre Desde el Principio — Track 04 de Trova Suburbana. Crónicas del Anáhuac · RLD ENSEMBLE.">
+  <title>SEPTIEMBRE — Letra | Crónicas del Anáhuac · RLD ENSEMBLE</title>
+  <meta name="description" content="Letra de SEPTIEMBRE — Track 06 de Anáhuac Ikal. Crónicas del Anáhuac · RLD ENSEMBLE.">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
 
@@ -20,6 +20,7 @@
       --dark:     #1e1508;
       --black:    #120e04;
       --accent:   #c47a1e;
+      --ocre:     #c47a1e;
       --tierra:   #6b3a1a;
       --font-display: 'Playfair Display', serif;
       --font-body:    'Outfit', sans-serif;
@@ -93,7 +94,7 @@
     .breadcrumb .sep { color: var(--border); }
 
     .lyric-header {
-      border-left: 5px solid var(--accent);
+      border-left: 5px solid var(--ocre);
       padding-left: 1.5rem;
       margin-bottom: 2.5rem;
     }
@@ -102,17 +103,18 @@
       font-size: 0.58rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--ocre);
       margin-bottom: 0.5rem;
     }
     .lyric-title {
       font-family: var(--font-display);
       font-weight: 900;
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
-      line-height: 1.1;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1;
       letter-spacing: -0.02em;
       color: var(--black);
       margin-bottom: 0.4rem;
+      text-transform: uppercase;
     }
     .lyric-artist {
       font-family: var(--font-display);
@@ -142,7 +144,7 @@
 
     .lyric-divider { height: 1px; background: var(--border); margin: 2rem 0; }
 
-    .lyric-section { margin-bottom: 2rem; }
+    .lyric-section { margin-bottom: 2.5rem; }
 
     .lyric-section-label {
       font-family: var(--font-mono);
@@ -163,6 +165,8 @@
       display: inline-block;
     }
 
+    /* Esta canción no tiene secciones etiquetadas —
+       las estrofas fluyen libres, separadas por espacio */
     .lyric-lines {
       font-family: var(--font-display);
       font-size: 1.1rem;
@@ -172,46 +176,51 @@
       border-left: 2px solid var(--panel);
     }
     .lyric-lines .line { display: block; }
-    .lyric-lines .line-em { display: block; font-style: italic; color: var(--gray); }
-
-    /* Coro — ocre dorado, más grande */
-    .lyric-section.coro .lyric-lines {
-      border-left: 3px solid var(--accent);
-      padding-left: 1rem;
-      background: rgba(196,122,30,0.07);
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
-      font-size: 1.2rem;
+    .lyric-lines .line-em {
+      display: block;
+      font-style: italic;
+      color: var(--gray);
     }
-    .lyric-section.coro .lyric-section-label { color: var(--accent); }
 
-    /* Coro final — con el "desde siempre" en cursiva */
-    .lyric-section.coro-final .lyric-lines {
-      border-left: 4px solid var(--tierra);
-      padding-left: 1rem;
-      background: rgba(107,58,26,0.07);
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
-      font-size: 1.2rem;
+    /* Estrofa de reflexión — centrada, sin borde */
+    .lyric-section.reflexion .lyric-lines {
+      border-left: none;
+      padding-left: 0;
+      text-align: center;
+      font-style: italic;
+      color: var(--gray);
+      font-size: 1rem;
     }
-    .lyric-section.coro-final .lyric-section-label { color: var(--tierra); }
-    .lyric-section.coro-final .lyric-section-label::before { background: var(--tierra); }
 
-    /* Instrumental */
-    .lyric-section.instrumental { text-align: center; }
+    /* Solo instrumental */
+    .lyric-section.instrumental {
+      text-align: center;
+    }
     .lyric-section.instrumental .lyric-section-label {
       justify-content: center;
     }
-    .lyric-section.instrumental .lyric-section-label::before { display: none; }
+    .lyric-section.instrumental .lyric-section-label::before {
+      display: none;
+    }
     .instrumental-note {
       font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
       color: var(--muted);
       font-style: italic;
-      padding: 0.9rem 1.5rem;
+      padding: 1rem 1.5rem;
       border: 1.5px dashed var(--border);
       display: inline-block;
+    }
+
+    /* Cierre — ocre suave */
+    .lyric-section.cierre .lyric-lines {
+      border-left: 3px solid var(--ocre);
+      padding-left: 1rem;
+      background: rgba(196,122,30,0.05);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      font-style: italic;
     }
 
     .track-nav {
@@ -255,7 +264,7 @@
 
   <nav class="top-nav">
     <a href="https://rldstudio.net/cronicas-del-anahuac/" class="nav-logo">RLD <span>Studio</span></a>
-    <a href="https://rldstudio.net/cronicas-del-anahuac/trova-suburbana.html">← Volver a Trova Suburbana</a>
+    <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html">← Volver a Anáhuac Ikal</a>
   </nav>
 
   <div class="lyric-page">
@@ -263,20 +272,20 @@
     <div class="breadcrumb">
       <a href="https://rldstudio.net/cronicas-del-anahuac/">Crónicas del Anáhuac</a>
       <span class="sep">·</span>
-      <a href="https://rldstudio.net/cronicas-del-anahuac/trova-suburbana.html">Trova Suburbana</a>
+      <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html">Anáhuac Ikal</a>
       <span class="sep">·</span>
-      <span>Track 04</span>
+      <span>Track 06</span>
     </div>
 
     <div class="lyric-header">
-      <p class="lyric-eyebrow">Crónicas del Anáhuac · Álbum 04 · Track 04</p>
-      <h1 class="lyric-title">Desde Siempre Desde el Principio</h1>
+      <p class="lyric-eyebrow">Crónicas del Anáhuac · Álbum 01 · Track 06</p>
+      <h1 class="lyric-title">Septiembre</h1>
       <p class="lyric-artist">RLD ENSEMBLE</p>
     </div>
 
     <div class="lyric-meta">
       <span class="lyric-tag lang">Español</span>
-      <span class="lyric-tag album">Álbum: Trova Suburbana</span>
+      <span class="lyric-tag album">Álbum: Anáhuac Ikal</span>
     </div>
 
     <div class="lyric-divider"></div>
@@ -284,58 +293,54 @@
     <div class="lyric-body">
 
       <div class="lyric-section">
-        <div class="lyric-section-label">Verso 1</div>
         <div class="lyric-lines">
-          <span class="line">Quizás hubo cosas que no vi</span>
-          <span class="line">no me juzgues tan mal</span>
-          <span class="line">no soy ciego al final</span>
-          <span class="line">Tal vez hay palabras que en la noche</span>
-          <span class="line">pienso que no debí decir</span>
-          <span class="line-em">pero ahí están</span>
-        </div>
-      </div>
-
-      <div class="lyric-section coro">
-        <div class="lyric-section-label">Coro</div>
-        <div class="lyric-lines">
-          <span class="line">Ya todo está claro</span>
-          <span class="line">siempre debiste estar aquí</span>
-          <span class="line-em">desde siempre</span>
+          <span class="line">Cuántas gotas de rocío alrededor de mí,</span>
+          <span class="line">busco el sol pero no está.</span>
+          <span class="line">Duerme aún la ciudad, quizás no,</span>
+          <span class="line-em">está despierta, me mira, no lo sé.</span>
         </div>
       </div>
 
       <div class="lyric-section">
-        <div class="lyric-section-label">Verso 2</div>
         <div class="lyric-lines">
-          <span class="line">Quizás pude ser diferente</span>
-          <span class="line">no tan frío, no tan duro</span>
-          <span class="line">no tan necio al final</span>
-          <span class="line">Lo que fue, ya fue</span>
-          <span class="line">no lo recuerdo bien</span>
-          <span class="line-em">ya no importa nada</span>
+          <span class="line">Ya el olor de la tierra mojada, olor a olivo,</span>
+          <span class="line">sube despacio hacia mí.</span>
+          <span class="line">Y la vida en mi pecho late lento,</span>
+          <span class="line-em">respiro la brisa, pienso en ti.</span>
         </div>
       </div>
 
-      <div class="lyric-section coro">
-        <div class="lyric-section-label">Coro</div>
+      <div class="lyric-section">
         <div class="lyric-lines">
-          <span class="line">Ya todo está claro</span>
-          <span class="line">siempre debiste estar aquí</span>
-          <span class="line-em">desde siempre</span>
+          <span class="line">Cuánta calma todo alrededor y aún más allá,</span>
+          <span class="line">parece casi un sueño el aire.</span>
+          <span class="line">Y ligero mi pensamiento vuela y va,</span>
+          <span class="line-em">casi tengo miedo de que se pierda…</span>
         </div>
       </div>
 
-      <div class="lyric-section instrumental">
-        <div class="lyric-section-label">Puente Instrumental</div>
-        <span class="instrumental-note">[ Instrumental ]</span>
+      <div class="lyric-section">
+        <div class="lyric-lines">
+          <span class="line">Un gato negro se acurruca contra el muro,</span>
+          <span class="line">se queda quieto como yo.</span>
+          <span class="line">Doy un paso, me ve, ya ha huido,</span>
+          <span class="line-em">respiro la brisa, pienso en ti.</span>
+        </div>
       </div>
 
-      <div class="lyric-section coro-final">
-        <div class="lyric-section-label">Coro Final</div>
+      <div class="lyric-section">
         <div class="lyric-lines">
-          <span class="line">Ya todo está claro</span>
-          <span class="line">siempre debiste estar aquí</span>
-          <span class="line-em">desde siempre… desde siempre.</span>
+          <span class="line">No, qué soy ahora no lo sé,</span>
+          <span class="line">soy un hombre, un hombre en busca de sí mismo.</span>
+          <span class="line">No, qué soy ahora no lo sé,</span>
+          <span class="line">estoy solo, solo el sonido de mi paso.</span>
+        </div>
+      </div>
+
+      <div class="lyric-section cierre">
+        <div class="lyric-lines">
+          <span class="line">Y mientras tanto el sol ya filtra entre las ramas:</span>
+          <span class="line">el día, como siempre, será.</span>
         </div>
       </div>
 
@@ -344,9 +349,9 @@
     <div class="lyric-divider"></div>
 
     <div class="track-nav">
-      <a href="CA4_T03_CENIZAS.html">← Track 03: Cenizas</a>
-      <a href="https://rldstudio.net/cronicas-del-anahuac/trova-suburbana.html">↑ Trova Suburbana</a>
-      <a href="CA4_T05_ENIGMAS_DE_LA_VIDA.html">Track 05: Enigmas de la Vida →</a>
+      <a href="CA1_T05_HASTA_LA_ULTIMA_NOTA.html">← Track 05: Hasta la Última Nota</a>
+      <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html">↑ Anáhuac Ikal</a>
+      <a href="CA1_T07_ESTRELLA_DE_LA_TARDE.html">Track 07: Estrella de la Tarde →</a>
     </div>
 
     <div class="lyric-footer">

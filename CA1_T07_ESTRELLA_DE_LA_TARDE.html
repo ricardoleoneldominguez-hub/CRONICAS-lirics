@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrella de la Tarde — Letra | Crónicas del Anáhuac · RLD ENSEMBLE</title>
+  <meta name="description" content="Letra de Estrella de la Tarde — Track 07 de Anáhuac Ikal. Crónicas del Anáhuac · RLD ENSEMBLE.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #f7f2e8;
+      --surface:  #fffcf5;
+      --panel:    #f0e8d0;
+      --border:   #d4c49a;
+      --muted:    #7a6a4f;
+      --gray:     #4a3f2f;
+      --dark:     #1e1508;
+      --black:    #120e04;
+      --accent:   #c47a1e;
+      --ocre:     #c47a1e;
+      --verde:    #2d6b3a;
+      --azul:     #1a4a6b;
+      --tierra:   #6b3a1a;
+      --font-display: 'Playfair Display', serif;
+      --font-body:    'Outfit', sans-serif;
+      --font-mono:    'DM Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 56px;
+      background: rgba(247,242,232,0.97);
+      border-bottom: 2px solid var(--dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .top-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .top-nav a:hover { color: var(--accent); }
+    .top-nav .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      color: var(--black);
+      text-transform: uppercase;
+    }
+    .top-nav .nav-logo span { color: var(--accent); }
+
+    .lyric-page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    .breadcrumb {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--dark); }
+    .breadcrumb .sep { color: var(--border); }
+
+    .lyric-header {
+      border-left: 5px solid var(--ocre);
+      padding-left: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .lyric-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ocre);
+      margin-bottom: 0.5rem;
+    }
+    .lyric-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 0.4rem;
+    }
+    .lyric-artist {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    .lyric-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .lyric-tag {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border: 1.5px solid var(--border);
+      color: var(--gray);
+      background: var(--surface);
+    }
+    .lyric-tag.lang  { border-color: var(--accent); color: var(--accent); }
+    .lyric-tag.lang2 { border-color: var(--verde);  color: var(--verde);  }
+    .lyric-tag.album { border-color: var(--tierra);  color: var(--tierra); }
+
+    .lyric-divider { height: 1px; background: var(--border); margin: 2rem 0; }
+
+    .lyric-section { margin-bottom: 2rem; }
+
+    .lyric-section-label {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .lyric-section-label::before {
+      content: '';
+      width: 16px;
+      height: 2px;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    .lyric-lines {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      line-height: 2;
+      color: var(--dark);
+      padding-left: 0.5rem;
+      border-left: 2px solid var(--panel);
+    }
+    .lyric-lines .line     { display: block; }
+    .lyric-lines .line-em  { display: block; font-style: italic; color: var(--gray); }
+
+    /* Pre-Coro — azul */
+    .lyric-section.precoro .lyric-lines {
+      border-left: 3px solid var(--azul);
+      padding-left: 1rem;
+      background: rgba(26,74,107,0.05);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .lyric-section.precoro .lyric-section-label { color: var(--azul); }
+    .lyric-section.precoro .lyric-section-label::before { background: var(--azul); }
+
+    /* Coro — ocre dorado */
+    .lyric-section.coro .lyric-lines {
+      border-left: 3px solid var(--ocre);
+      padding-left: 1rem;
+      background: rgba(196,122,30,0.07);
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      font-size: 1.15rem;
+    }
+    .lyric-section.coro .lyric-section-label { color: var(--ocre); }
+
+    /* Puente multilingüe — verde jade, con voces diferenciadas */
+    .lyric-section.puente .lyric-lines {
+      border-left: 3px solid var(--verde);
+      padding-left: 1rem;
+      background: rgba(45,107,58,0.05);
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+    .lyric-section.puente .lyric-section-label { color: var(--verde); }
+    .lyric-section.puente .lyric-section-label::before { background: var(--verde); }
+
+    .lang-line {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .lang-text {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--dark);
+    }
+    .lang-note {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      color: var(--verde);
+      opacity: 0.7;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* Coro final — más oscuro */
+    .lyric-section.coro-final .lyric-lines {
+      border-left: 4px solid var(--tierra);
+      padding-left: 1rem;
+      background: rgba(107,58,26,0.07);
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      font-size: 1.15rem;
+    }
+    .lyric-section.coro-final .lyric-section-label { color: var(--tierra); }
+    .lyric-section.coro-final .lyric-section-label::before { background: var(--tierra); }
+
+    /* Outro */
+    .lyric-section.outro { text-align: center; }
+    .lyric-section.outro .lyric-section-label {
+      justify-content: center;
+    }
+    .lyric-section.outro .lyric-section-label::before { display: none; }
+    .outro-note {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      font-style: italic;
+      padding: 0.9rem 1.5rem;
+      border: 1.5px dashed var(--border);
+      display: inline-block;
+    }
+
+    /* Glosario */
+    .glosario {
+      background: var(--panel);
+      border: 2px solid var(--dark);
+      padding: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .glosario-title {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--verde);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .glosario-title::before {
+      content: '';
+      width: 16px; height: 2px;
+      background: var(--verde);
+      display: inline-block;
+    }
+    .glosario-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.5rem 1.5rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+    .glosario-item:last-child { border-bottom: none; }
+    .glosario-word {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--dark);
+      font-weight: 700;
+    }
+    .glosario-lang {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--verde);
+    }
+    .glosario-def {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      color: var(--gray);
+    }
+
+    .track-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-top: 2px solid var(--dark);
+      margin-top: 3rem;
+    }
+    .track-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dark);
+      text-decoration: none;
+      border: 1.5px solid var(--dark);
+      padding: 0.5rem 1rem;
+      transition: all 0.2s;
+    }
+    .track-nav a:hover { background: var(--dark); color: var(--bg); }
+
+    .lyric-footer {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+    .lyric-footer p {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="https://rldstudio.net/cronicas-del-anahuac/" class="nav-logo">RLD <span>Studio</span></a>
+    <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html">← Volver a Anáhuac Ikal</a>
+  </nav>
+
+  <div class="lyric-page">
+
+    <div class="breadcrumb">
+      <a href="https://rldstudio.net/cronicas-del-anahuac/">Crónicas del Anáhuac</a>
+      <span class="sep">·</span>
+      <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html">Anáhuac Ikal</a>
+      <span class="sep">·</span>
+      <span>Track 07</span>
+    </div>
+
+    <div class="lyric-header">
+      <p class="lyric-eyebrow">Crónicas del Anáhuac · Álbum 01 · Track 07</p>
+      <h1 class="lyric-title">Estrella de la Tarde</h1>
+      <p class="lyric-artist">RLD ENSEMBLE</p>
+    </div>
+
+    <div class="lyric-meta">
+      <span class="lyric-tag lang">Español</span>
+      <span class="lyric-tag lang2">Náhuatl</span>
+      <span class="lyric-tag lang2">Tz'utujil</span>
+      <span class="lyric-tag lang2">Ch'orti' Maya</span>
+      <span class="lyric-tag album">Álbum: Anáhuac Ikal</span>
+    </div>
+
+    <div class="lyric-divider"></div>
+
+    <div class="lyric-body">
+
+      <div class="lyric-section">
+        <div class="lyric-section-label">Verso 1</div>
+        <div class="lyric-lines">
+          <span class="line">Estrella de la tarde</span>
+          <span class="line">cuéntame por qué te has ido</span>
+          <span class="line">cuenta que por qué nos has dejado</span>
+          <span class="line">es que encontraste un paraíso diferente al nuestro</span>
+        </div>
+      </div>
+
+      <div class="lyric-section precoro">
+        <div class="lyric-section-label">Pre-Coro</div>
+        <div class="lyric-lines">
+          <span class="line">es que acaso encontraste un propósito nuevo</span>
+          <span class="line-em">o será simplemente que nos has olvidado</span>
+        </div>
+      </div>
+
+      <div class="lyric-section coro">
+        <div class="lyric-section-label">Coro</div>
+        <div class="lyric-lines">
+          <span class="line">Estrella de la tarde</span>
+          <span class="line">nuestra gente te extraña</span>
+          <span class="line">estrella de la tarde</span>
+          <span class="line">nuestra gente te añora</span>
+        </div>
+      </div>
+
+      <div class="lyric-section">
+        <div class="lyric-section-label">Verso 2</div>
+        <div class="lyric-lines">
+          <span class="line">pero en mi corazón alberga</span>
+          <span class="line">una tenue esperanza que en un día a futuro</span>
+          <span class="line-em">es nuevamente nuestras tierras</span>
+        </div>
+      </div>
+
+      <div class="lyric-section puente">
+        <div class="lyric-section-label">Puente — Multilingüe</div>
+        <div class="lyric-lines">
+          <div class="lang-line">
+            <span class="lang-text">Teotlac citlali</span>
+            <span class="lang-note">Náhuatl · susurrado</span>
+          </div>
+          <div class="lang-line">
+            <span class="lang-text">Q'ij ruch'umil</span>
+            <span class="lang-note">Tz'utujil · armonía suave</span>
+          </div>
+          <div class="lang-line">
+            <span class="lang-text">Ikʼ tz'unun eekʼ</span>
+            <span class="lang-note">Ch'orti' Maya · eco gentil</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lyric-section coro-final">
+        <div class="lyric-section-label">Coro Final</div>
+        <div class="lyric-lines">
+          <span class="line">Estrella de la tarde</span>
+          <span class="line">nuestra gente te extraña</span>
+          <span class="line">pero la esperanza vive</span>
+          <span class="line-em">en nuestras tierras</span>
+        </div>
+      </div>
+
+      <div class="lyric-section outro">
+        <div class="lyric-section-label">Outro</div>
+        <span class="outro-note">[ Marimba y flauta en desvanecimiento gradual,<br>como una estrella que se apaga. ]</span>
+      </div>
+
+    </div>
+
+    <div class="lyric-divider"></div>
+
+    <!-- GLOSARIO MULTILINGÜE -->
+    <div class="glosario">
+      <div class="glosario-title">Glosario — Lenguas Mesoamericanas</div>
+
+      <div class="glosario-item">
+        <span class="glosario-word">Teotlac citlali</span>
+        <span class="glosario-lang">Náhuatl</span>
+        <span class="glosario-def">Estrella de la tarde / estrella vespertina</span>
+      </div>
+      <div class="glosario-item">
+        <span class="glosario-word">Q'ij ruch'umil</span>
+        <span class="glosario-lang">Tz'utujil</span>
+        <span class="glosario-def">El sol y su estrella / la luz del día</span>
+      </div>
+      <div class="glosario-item">
+        <span class="glosario-word">Ikʼ tz'unun eekʼ</span>
+        <span class="glosario-lang">Ch'orti' Maya</span>
+        <span class="glosario-def">Luna, colibrí oscuro / espíritu nocturno</span>
+      </div>
+    </div>
+
+    <div class="track-nav">
+      <a href="CA1_T06_SEPTIEMBRE.html">← Track 06: SEPTIEMBRE</a>
+      <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html">↑ Anáhuac Ikal</a>
+      <a href="CA1_T08_LO_QUE_EL_TIEMPO_GUARDA.html">Track 08: Lo que el Tiempo Guarda →</a>
+    </div>
+
+    <div class="lyric-footer">
+      <p>RLD ENSEMBLE · Crónicas del Anáhuac · © 2026 RLD Studio</p>
+      <p style="margin-top:0.4rem;">somos@rldstudio.net</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
