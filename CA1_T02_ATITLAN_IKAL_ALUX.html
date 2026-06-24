@@ -3,162 +3,412 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atitlan Ikal Alux — Letra | Crónicas del Anáhuac · RLD ENSEMBLE</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <title>ATITLAN IKAL ALUX — Letra | Crónicas del Anáhuac · RLD ENSEMBLE</title>
+  <meta name="description" content="Letra de ATITLAN IKAL ALUX — Track 02 de Anáhuac Ikal. Español y Tz'utujil. Crónicas del Anáhuac · RLD ENSEMBLE.">
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    :root{--bg:#f7f2e8;--surface:#fffcf5;--panel:#f0e8d0;--border:#d4c49a;--muted:#7a6a4f;--gray:#4a3f2f;--dark:#1e1508;--black:#120e04;--accent:#c47a1e;--verde:#2d6b3a;--font-display:'Playfair Display',serif;--font-body:'Outfit',sans-serif;--font-mono:'DM Mono',monospace;}
-    body{background:var(--bg);color:var(--dark);font-family:var(--font-body);font-size:16px;line-height:1.7;padding-bottom:4rem;}
-    a{color:var(--accent);text-decoration:none;}
-    nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:60px;background:rgba(247,242,232,0.97);border-bottom:2px solid var(--dark);}
-    .nav-logo{font-family:var(--font-display);font-weight:900;font-size:1.1rem;color:var(--black);text-transform:uppercase;}
-    .nav-logo span{color:var(--accent);}
-    .back-link{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);}
-    .back-link:hover{color:var(--accent);}
-    .page-header{position:relative;min-height:22vh;display:flex;align-items:flex-end;padding:2.5rem 3rem;background:var(--panel);border-top:4px solid var(--accent);overflow:hidden;}
-    .page-header-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 0% 100%,rgba(196,122,30,0.12) 0%,transparent 60%);}
-    .page-header-content{position:relative;z-index:1;}
-    .page-chapter{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem;}
-    .page-title{font-family:var(--font-display);font-weight:900;font-size:clamp(2rem,5vw,3rem);line-height:1;letter-spacing:-0.02em;color:var(--black);margin-bottom:0.25rem;}
-    .page-tagline{font-family:var(--font-display);font-style:italic;font-size:1rem;color:var(--gray);}
-    .lyrics-wrap{max-width:720px;margin:3rem auto;padding:0 2rem;}
-    .lyrics-info{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;}
-    .lyric-tag{font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--verde);border:2px solid var(--verde);padding:0.25rem 0.7rem;background:rgba(45,107,58,0.06);}
-    .lyrics-body{font-family:var(--font-display);font-size:1.05rem;line-height:2;color:var(--dark);}
-    .stanza{margin-bottom:2rem;}
-    .section-label{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;display:block;}
-    .chorus{background:var(--panel);border-left:4px solid var(--accent);padding:1.25rem 1.5rem;margin:2rem 0;}
-    .note{font-family:var(--font-mono);font-size:0.7rem;color:var(--muted);font-style:italic;margin-bottom:1rem;}
-    .translation{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--verde);padding:1.25rem 1.5rem;margin:2rem 0;}
-    .translation .section-label{color:var(--verde);}
-    .translation p{font-family:var(--font-mono);font-size:0.78rem;color:var(--gray);line-height:1.8;}
-    .divider{height:1px;background:var(--border);margin:2.5rem 0;}
-    .nav-tracks{display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);}
-    .nav-btn{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);}
-    .nav-btn:hover{color:var(--accent);}
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #f7f2e8;
+      --surface:  #fffcf5;
+      --panel:    #f0e8d0;
+      --border:   #d4c49a;
+      --muted:    #7a6a4f;
+      --gray:     #4a3f2f;
+      --dark:     #1e1508;
+      --black:    #120e04;
+      --accent:   #c47a1e;
+      --ocre:     #c47a1e;
+      --tierra:   #6b3a1a;
+      --verde:    #2d6b3a;
+      --font-display: 'Playfair Display', serif;
+      --font-body:    'Outfit', sans-serif;
+      --font-mono:    'DM Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 56px;
+      background: rgba(247,242,232,0.97);
+      border-bottom: 2px solid var(--dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .top-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .top-nav a:hover { color: var(--accent); }
+    .top-nav .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      color: var(--black);
+      text-transform: uppercase;
+    }
+    .top-nav .nav-logo span { color: var(--accent); }
+
+    .lyric-page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    .breadcrumb {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--dark); }
+    .breadcrumb .sep { color: var(--border); }
+
+    .lyric-header {
+      border-left: 5px solid var(--ocre);
+      padding-left: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .lyric-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ocre);
+      margin-bottom: 0.5rem;
+    }
+    .lyric-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+    }
+    .lyric-artist {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    .lyric-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .lyric-tag {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border: 1.5px solid var(--border);
+      color: var(--gray);
+      background: var(--surface);
+    }
+    .lyric-tag.lang { border-color: var(--verde); color: var(--verde); background: rgba(45,107,58,0.06); }
+    .lyric-tag.album { border-color: var(--tierra); color: var(--tierra); }
+
+    .lyric-divider { height: 1px; background: var(--border); margin: 2rem 0; }
+
+    .lyric-section { margin-bottom: 2.5rem; }
+
+    .lyric-section-label {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .lyric-section-label::before {
+      content: '';
+      width: 16px;
+      height: 2px;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    .lyric-lines {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      line-height: 2.1;
+      color: var(--dark);
+      padding-left: 0.5rem;
+      border-left: 2px solid var(--panel);
+    }
+    .lyric-lines .line { display: block; }
+    .lyric-lines .line-em {
+      display: block;
+      font-style: italic;
+      color: var(--gray);
+    }
+    .lyric-lines .gap { display: block; height: 0.9rem; }
+
+    /* Coro — ocre suave */
+    .lyric-section.coro .lyric-lines {
+      border-left: 3px solid var(--ocre);
+      padding-left: 1rem;
+      background: rgba(196,122,30,0.05);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    /* Outro en lengua originaria — borde jade */
+    .lyric-section.originaria .lyric-lines {
+      border-left: 3px solid var(--verde);
+      padding-left: 1rem;
+      background: rgba(45,107,58,0.05);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .lyric-section.originaria .lyric-section-label { color: var(--verde); }
+    .lyric-section.originaria .lyric-section-label::before { background: var(--verde); }
+
+    /* Bloque de traducción */
+    .lyric-translation {
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--verde);
+      background: var(--surface);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .lyric-translation .lyric-section-label { color: var(--verde); }
+    .lyric-translation .lyric-section-label::before { background: var(--verde); }
+    .trad-line {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      line-height: 1.85;
+      color: var(--gray);
+    }
+    .trad-line em { color: var(--dark); font-style: italic; }
+
+    .track-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-top: 2px solid var(--dark);
+      margin-top: 3rem;
+    }
+    .track-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dark);
+      text-decoration: none;
+      border: 1.5px solid var(--dark);
+      padding: 0.5rem 1rem;
+      transition: all 0.2s;
+    }
+    .track-nav a:hover { background: var(--dark); color: var(--bg); }
+
+    .lyric-footer {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+    .lyric-footer p {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+    }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="https://rldstudio.net/cronicas-del-anahuac/" class="nav-logo">RLD <span>Studio</span></a>
-  <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html" class="back-link">← Volver a Anáhuac</a>
-</nav>
+  <nav class="top-nav">
+    <a href="https://rldstudio.net/cronicas-del-anahuac/" class="nav-logo">RLD <span>Studio</span></a>
+    <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html">← Volver a Anáhuac Ikal</a>
+  </nav>
 
-<header class="page-header">
-  <div class="page-header-bg"></div>
-  <div class="page-header-content">
-    <p class="page-chapter">Crónicas del Anáhuac · Álbum 01 · Track 02</p>
-    <h1 class="page-title">Atitlan Ikal Alux</h1>
-    <p class="page-tagline">RLD ENSEMBLE</p>
+  <div class="lyric-page">
+
+    <div class="breadcrumb">
+      <a href="https://rldstudio.net/cronicas-del-anahuac/">Crónicas del Anáhuac</a>
+      <span class="sep">·</span>
+      <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html">Anáhuac Ikal</a>
+      <span class="sep">·</span>
+      <span>Track 02</span>
+    </div>
+
+    <div class="lyric-header">
+      <p class="lyric-eyebrow">Crónicas del Anáhuac · Álbum 01 · Track 02</p>
+      <h1 class="lyric-title">Atitlan Ikal Alux</h1>
+      <p class="lyric-artist">RLD ENSEMBLE</p>
+    </div>
+
+    <div class="lyric-meta">
+      <span class="lyric-tag lang">Español</span>
+      <span class="lyric-tag lang">Tz'utujil</span>
+      <span class="lyric-tag album">Álbum: Anáhuac Ikal</span>
+    </div>
+
+    <div class="lyric-divider"></div>
+
+    <div class="lyric-body">
+
+      <div class="lyric-section">
+        <div class="lyric-section-label">Verso 1</div>
+        <div class="lyric-lines">
+          <span class="line">Tres volcanes son guardianes de tu espejo,</span>
+          <span class="line">nacidos del fuego del trueno y del tiempo.</span>
+          <span class="line">San Pedro, Tolimán y el gran Atitlán,</span>
+          <span class="line">con sus faldas de café cuidan mi pueblo.</span>
+          <span class="gap"></span>
+          <span class="line">El lago suspira a sus pies extático,</span>
+          <span class="line">y en su cristal se miran altivos y extáticos.</span>
+          <span class="line">Doce pueblos bordan tus orillas de color,</span>
+          <span class="line">doce historias que cuentan tu resplandor.</span>
+          <span class="gap"></span>
+          <span class="line">Desde Santiago, donde Maximón vigila en su morada,</span>
+          <span class="line">hasta San Juan con su galería de murales y almohadas.</span>
+          <span class="line">San Pedro es bohemio, con yoga y volcán,</span>
+          <span class="line">y en Santa Catarina los huipiles se pintan en el pan.</span>
+        </div>
+      </div>
+
+      <div class="lyric-section coro">
+        <div class="lyric-section-label">Coro</div>
+        <div class="lyric-lines">
+          <span class="line">Ay, lago azul, espejo de mi tierra, suspiro de mi voz,</span>
+          <span class="line">testigo de volcanes y del tiempo que pasó.</span>
+          <span class="line">Eres el canto eterno que mi pueblo heredó,</span>
+          <span class="line">la piel de la luna que en tus aguas se posó.</span>
+          <span class="gap"></span>
+          <span class="line">Remo tu historia, tu misterio, tu fulgor,</span>
+          <span class="line-em">corazón de estos valles, de los pueblos el honor.</span>
+        </div>
+      </div>
+
+      <div class="lyric-section">
+        <div class="lyric-section-label">Verso 2</div>
+        <div class="lyric-lines">
+          <span class="line">En San Antonio el barro canta en las manos del alfarero,</span>
+          <span class="line">y en los telares de mujer se teje el mundo entero.</span>
+          <span class="line">Cuentan que bajo tus aguas, en un sueño profundo,</span>
+          <span class="line">duerme Samabaj, la Atlántida de este mundo.</span>
+          <span class="gap"></span>
+          <span class="line">Y en las noches de luna, si el viento es callado,</span>
+          <span class="line">se oye el lamento de un amor encantado.</span>
+          <span class="line">Es el suspiro de un joven por una Characotel,</span>
+          <span class="line">una doncella que se vuelve animal en la piel.</span>
+          <span class="gap"></span>
+          <span class="line">Seres de niebla que el lago guardó,</span>
+          <span class="line">historias ancestrales de quien aquí se quedó.</span>
+          <span class="line">Porque cada ola que besa la orilla</span>
+          <span class="line">es una memoria que nunca se humilla.</span>
+        </div>
+      </div>
+
+      <div class="lyric-section coro">
+        <div class="lyric-section-label">Coro</div>
+        <div class="lyric-lines">
+          <span class="line">Ay, lago azul, espejo de mi tierra, suspiro de mi voz,</span>
+          <span class="line">testigo de volcanes y del tiempo que pasó.</span>
+          <span class="line">Eres el canto eterno que mi pueblo heredó,</span>
+          <span class="line">la piel de la luna que en tus aguas se posó.</span>
+          <span class="gap"></span>
+          <span class="line">Remo tu historia, tu misterio, tu fulgor,</span>
+          <span class="line-em">corazón de estos valles, de los pueblos el honor.</span>
+        </div>
+      </div>
+
+      <div class="lyric-section">
+        <div class="lyric-section-label">Puente</div>
+        <div class="lyric-lines">
+          <span class="line">Y en la neblina del alba, cuando el sol besa tu espejo,</span>
+          <span class="line">los volcanes se imaginan que son tres Don Juanes viejos,</span>
+          <span class="line">enamorados de tu linfa que a sus pies suspira,</span>
+          <span class="line-em">mientras tu gente despierta y a la vida te mira.</span>
+        </div>
+      </div>
+
+      <div class="lyric-section originaria">
+        <div class="lyric-section-label">Outro · Tz'utujil</div>
+        <div class="lyric-lines">
+          <span class="line">Nisaqärik chik pa Atitlan</span>
+          <span class="line">Ri ya' tezcatl nuk'üt ri nab'ey q'ij saqil</span>
+          <span class="line">Chi rij ri juyub' q'aq'</span>
+          <span class="line">Tolimán, Atitlan, San Pedro</span>
+          <span class="line">Ri chuq'a kaq'ïq' nïch'on tz'ïl</span>
+          <span class="line">Chwa'q xtik'astäj chik</span>
+          <span class="line">Nisaqärik, nisaqärik</span>
+          <span class="line">Jeri' xtibanatäj</span>
+        </div>
+      </div>
+
+      <div class="lyric-translation">
+        <div class="lyric-section-label">Traducción del Outro</div>
+        <span class="trad-line">Nisaqärik chik pa Atitlan — <em>Ya amanece en Atitlán</em></span>
+        <span class="trad-line">Ri ya' tezcatl nuk'üt ri nab'ey q'ij saqil — <em>El lago espejo muestra los primeros rayos del sol</em></span>
+        <span class="trad-line">Chi rij ri juyub' q'aq' — <em>A través de los volcanes de fuego</em></span>
+        <span class="trad-line">Tolimán, Atitlan, San Pedro</span>
+        <span class="trad-line">Ri chuq'a kaq'ïq' nïch'on tz'ïl — <em>Y el aire fresco murmura quedamente</em></span>
+        <span class="trad-line">Chwa'q xtik'astäj chik — <em>Mañana vivirás de nuevo</em></span>
+        <span class="trad-line">Nisaqärik, nisaqärik — <em>Amanece, amanece</em></span>
+        <span class="trad-line">Jeri' xtibanatäj — <em>Que así sea</em></span>
+      </div>
+
+    </div>
+
+    <div class="lyric-divider"></div>
+
+    <div class="track-nav">
+      <a href="CA1_T01_ANAHUAC_IKAL.html">← Track 01: Anáhuac Ikal</a>
+      <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html">↑ Anáhuac Ikal</a>
+      <a href="CA1_T03_EL_VIEJO_Y_SU_FLAUTA.html">Track 03: El Viejo: Río y Piedra →</a>
+    </div>
+
+    <div class="lyric-footer">
+      <p>RLD ENSEMBLE · Crónicas del Anáhuac · © 2026 RLD Studio</p>
+      <p style="margin-top:0.4rem;">somos@rldstudio.net</p>
+    </div>
+
   </div>
-</header>
-
-<div class="lyrics-wrap">
-  <div class="lyrics-info">
-    <span class="lyric-tag">Español</span>
-    <span class="lyric-tag">Tz'utujil</span>
-    <span class="lyric-tag">Mixto</span>
-    <span class="lyric-tag">Álbum: Anáhuac</span>
-  </div>
-
-  <div class="lyrics-body">
-
-    <div class="stanza">
-      <span class="section-label">Verso 1</span>
-      Tres volcanes son guardianes de tu espejo<br>
-      nacidos del fuego del trueno y del tiempo<br>
-      San Pedro Tolimán y el gran Atitlán<br>
-      con sus faldas de café cuidan mi pueblo<br><br>
-      El lago suspira a sus pies extático<br>
-      y en su cristal se miran altivos y extáticos<br>
-      Doce pueblos bordan tus orillas de color<br>
-      doce historias que cuentan tu resplandor<br><br>
-      Desde Santiago donde Maximón vigila en su morada<br>
-      hasta San Juan con su galería de murales y almohadas<br>
-      San Pedro es bohemio con yoga y volcán<br>
-      y en Santa Catarina los huipiles se pintan en el pan
-    </div>
-
-    <div class="chorus">
-      <span class="section-label">Coro</span>
-      Ay Lago azul espejo de mi tierra suspiro de mi voz<br>
-      testigo de volcanes y del tiempo que pasó<br>
-      Eres el canto eterno que mi pueblo heredó<br>
-      la piel de la luna que en tus aguas se posó<br><br>
-      Remo tu historia tu misterio tu fulgor<br>
-      corazón de estos valles de los pueblos el honor
-    </div>
-
-    <div class="stanza">
-      <span class="section-label">Verso 2</span>
-      En San Antonio el barro canta en las manos del alfarero<br>
-      y en los telares de mujer se teje el mundo entero<br>
-      Cuentan que bajo tus aguas en un sueño profundo<br>
-      duerme Samabaj la Atlántida de este mundo<br><br>
-      Y en las noches de luna si el viento es callado<br>
-      se oye el lamento de un amor encantado<br>
-      Es el suspiro de un joven por una Characotel<br>
-      una doncella que se vuelve animal en la piel<br><br>
-      Seres de niebla que el lago guardó<br>
-      historias ancestrales de quien aquí se quedó<br>
-      Porque cada ola que besa la orilla<br>
-      es una memoria que nunca se humilla
-    </div>
-
-    <div class="chorus">
-      <span class="section-label">Coro</span>
-      Ay Lago azul espejo de mi tierra suspiro de mi voz<br>
-      testigo de volcanes y del tiempo que pasó<br>
-      Eres el canto eterno que mi pueblo heredó<br>
-      la piel de la luna que en tus aguas se posó<br><br>
-      Remo tu historia tu misterio tu fulgor<br>
-      corazón de estos valles de los pueblos el honor
-    </div>
-
-    <div class="stanza">
-      <span class="section-label">Puente</span>
-      Y en la neblina del alba cuando el sol besa tu espejo<br>
-      los volcanes se imaginan que son tres Don Juanes viejos<br>
-      enamorados de tu linfa que a sus pies suspira<br>
-      mientras tu gente despierta y a la vida te mira
-    </div>
-
-    <div class="stanza">
-      <span class="section-label">Outro — Tz'utujil</span>
-      Nisaqärik chik pa Atitlan<br>
-      Ri ya' tezcatl nuk'üt ri nab'ey q'ij saqil<br>
-      Chi rij ri juyub' q'aq'<br>
-      Tolimán, Atitlan, San Pedro<br>
-      Ri chuq'a kaq'ïq' nïch'on tz'ïl<br>
-      Chwa'q xtik'astäj chik<br>
-      Nisaqärik, nisaqärik<br>
-      Jeri' xtibanatäj
-    </div>
-
-  </div>
-
-  <div class="translation">
-    <span class="section-label">Traducción del Outro</span>
-    <p>
-      Nisaqärik chik pa Atitlan — <em>Ya amanece en Atitlán</em><br>
-      Ri ya' tezcatl nuk'üt ri nab'ey q'ij saqil — <em>El lago espejo muestra los primeros rayos del sol</em><br>
-      Chi rij ri juyub' q'aq' — <em>A través de los volcanes de fuego</em><br>
-      Tolimán, Atitlan, San Pedro<br>
-      Ri chuq'a kaq'ïq' nïch'on tz'ïl — <em>Y el aire fresco murmura quedamente</em><br>
-      Chwa'q xtik'astäj chik — <em>Mañana vivirás de nuevo</em><br>
-      Nisaqärik, nisaqärik — <em>Amanece, amanece</em><br>
-      Jeri' xtibanatäj — <em>Que así sea</em>
-    </p>
-  </div>
-
-  <div class="divider"></div>
-
-  <div class="nav-tracks">
-    <a href="CA1_T01_ANAHUAC_IKAL.html" class="nav-btn">← Track 01: Anáhuac Ikal</a>
-    <a href="CA1_T03_EL_VIEJO_Y_SU_FLAUTA.html" class="nav-btn">Track 03: El Viejo y su Flauta →</a>
-  </div>
-</div>
 
 </body>
 </html>
