@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SEPTIEMBRE — Letra | Crónicas del Anáhuac · RLD ENSEMBLE</title>
-  <meta name="description" content="Letra de SEPTIEMBRE — Track 06 de Anáhuac Ikal. Crónicas del Anáhuac · RLD ENSEMBLE.">
+  <title>TEOTLAC CITLALI — Letra | Crónicas del Anáhuac · RLD ENSEMBLE</title>
+  <meta name="description" content="Letra de TEOTLAC CITLALI — Track 07 de Anáhuac Ikal. Canción en Nahuatl. Crónicas del Anáhuac · RLD ENSEMBLE.">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
 
@@ -165,8 +165,6 @@
       display: inline-block;
     }
 
-    /* Esta canción no tiene secciones etiquetadas —
-       las estrofas fluyen libres, separadas por espacio */
     .lyric-lines {
       font-family: var(--font-display);
       font-size: 1.1rem;
@@ -181,8 +179,27 @@
       font-style: italic;
       color: var(--gray);
     }
+    /* Traducción al español — debajo de cada verso */
+    .lyric-lines .line-trad {
+      display: block;
+      font-family: var(--font-body);
+      font-style: italic;
+      font-size: 0.8rem;
+      line-height: 1.4;
+      color: var(--muted);
+      margin-bottom: 0.7rem;
+    }
 
-    /* Estrofa de reflexión — centrada, sin borde */
+    /* Coro — ocre suave */
+    .lyric-section.coro .lyric-lines {
+      border-left: 3px solid var(--ocre);
+      padding-left: 1rem;
+      background: rgba(196,122,30,0.05);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    /* Puente — centrado, sin borde */
     .lyric-section.reflexion .lyric-lines {
       border-left: none;
       padding-left: 0;
@@ -274,17 +291,17 @@
       <span class="sep">·</span>
       <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html">Anáhuac Ikal</a>
       <span class="sep">·</span>
-      <span>Track 06</span>
+      <span>Track 07</span>
     </div>
 
     <div class="lyric-header">
-      <p class="lyric-eyebrow">Crónicas del Anáhuac · Álbum 01 · Track 06</p>
-      <h1 class="lyric-title">Septiembre</h1>
+      <p class="lyric-eyebrow">Crónicas del Anáhuac · Álbum 01 · Track 07</p>
+      <h1 class="lyric-title">Teotlac Citlali</h1>
       <p class="lyric-artist">RLD ENSEMBLE</p>
     </div>
 
     <div class="lyric-meta">
-      <span class="lyric-tag lang">Español</span>
+      <span class="lyric-tag lang">Nahuatl</span>
       <span class="lyric-tag album">Álbum: Anáhuac Ikal</span>
     </div>
 
@@ -292,55 +309,101 @@
 
     <div class="lyric-body">
 
+      <p style="font-family:var(--font-mono); font-size:0.62rem; letter-spacing:0.15em; color:var(--muted); text-transform:uppercase; margin-bottom:2rem;">
+        Letra en Nahuatl · traducción al español debajo de cada verso
+      </p>
+
       <div class="lyric-section">
+        <div class="lyric-section-label">Verso 1</div>
         <div class="lyric-lines">
-          <span class="line">Cuántas gotas de rocío alrededor de mí,</span>
-          <span class="line">busco el sol pero no está.</span>
-          <span class="line">Duerme aún la ciudad, quizás no,</span>
-          <span class="line-em">está despierta, me mira, no lo sé.</span>
+          <span class="line">Teotlac citlali</span>
+          <span class="line-trad">Estrella de la tarde</span>
+          <span class="line">tlanextia ipan ilhuicatl,</span>
+          <span class="line-trad">iluminas el cielo</span>
+          <span class="line">noyollo mitztemohua</span>
+          <span class="line-trad">mi corazón te busca</span>
+          <span class="line">ipan yohualli tlamahuizolli.</span>
+          <span class="line-trad">en la noche de maravillas</span>
+        </div>
+      </div>
+
+      <div class="lyric-section coro">
+        <div class="lyric-section-label">Coro</div>
+        <div class="lyric-lines">
+          <span class="line">Citlali, citlali,</span>
+          <span class="line-trad">Estrella, estrella</span>
+          <span class="line">tlanextia, tlanextia,</span>
+          <span class="line-trad">ilumina, ilumina</span>
+          <span class="line">ipan ilhuicatl tlazohtlaliztli,</span>
+          <span class="line-trad">en el cielo del amor</span>
+          <span class="line">noyollo pahtia.</span>
+          <span class="line-trad">mi corazón sana</span>
         </div>
       </div>
 
       <div class="lyric-section">
+        <div class="lyric-section-label">Verso 2</div>
         <div class="lyric-lines">
-          <span class="line">Ya el olor de la tierra mojada, olor a olivo,</span>
-          <span class="line">sube despacio hacia mí.</span>
-          <span class="line">Y la vida en mi pecho late lento,</span>
-          <span class="line-em">respiro la brisa, pienso en ti.</span>
+          <span class="line">In tonatiuh oncalaqui,</span>
+          <span class="line-trad">Cuando el sol se oculta</span>
+          <span class="line">tlazohcitlali pepetlaca,</span>
+          <span class="line-trad">la estrella amada brilla</span>
+          <span class="line">iuhqui xochitl in ilhuicac</span>
+          <span class="line-trad">como flor en el cielo</span>
+          <span class="line">mochihua cemanahuac tlanextli.</span>
+          <span class="line-trad">se hace luz del mundo</span>
+        </div>
+      </div>
+
+      <div class="lyric-section coro">
+        <div class="lyric-section-label">Coro</div>
+        <div class="lyric-lines">
+          <span class="line">Citlali, citlali,</span>
+          <span class="line-trad">Estrella, estrella</span>
+          <span class="line">tlanextia, tlanextia,</span>
+          <span class="line-trad">ilumina, ilumina</span>
+          <span class="line">ipan ilhuicatl tlazohtlaliztli,</span>
+          <span class="line-trad">en el cielo del amor</span>
+          <span class="line">noyollo pahtia.</span>
+          <span class="line-trad">mi corazón sana</span>
+        </div>
+      </div>
+
+      <div class="lyric-section reflexion">
+        <div class="lyric-section-label">Puente</div>
+        <span class="instrumental-note">Instrumental · Teponaztli y caracol</span>
+        <div class="lyric-lines" style="margin-top:1.25rem;">
+          <span class="line">Nochi cemanahuac quicaqui</span>
+          <span class="line-trad">Todo el mundo escucha</span>
+          <span class="line">in citlali icuicatl,</span>
+          <span class="line-trad">el canto de la estrella</span>
+          <span class="line">tlazohtlaliztli ihuan tlanextli</span>
+          <span class="line-trad">amor y luz</span>
+          <span class="line">mochihua ce.</span>
+          <span class="line-trad">se hacen uno</span>
         </div>
       </div>
 
       <div class="lyric-section">
+        <div class="lyric-section-label">Verso 3 · Final</div>
         <div class="lyric-lines">
-          <span class="line">Cuánta calma todo alrededor y aún más allá,</span>
-          <span class="line">parece casi un sueño el aire.</span>
-          <span class="line">Y ligero mi pensamiento vuela y va,</span>
-          <span class="line-em">casi tengo miedo de que se pierda…</span>
+          <span class="line">Teotlac citlali, ximocehua,</span>
+          <span class="line-trad">Estrella de la tarde, detente</span>
+          <span class="line">ipan noyollo ximotlali.</span>
+          <span class="line-trad">en mi corazón descansa</span>
+          <span class="line">Ayic nimitzilcahuaz,</span>
+          <span class="line-trad">jamás te olvidaré</span>
+          <span class="line">notlanex, nocitlal.</span>
+          <span class="line-trad">mi luz, mi estrella</span>
         </div>
       </div>
 
-      <div class="lyric-section">
-        <div class="lyric-lines">
-          <span class="line">Un gato negro se acurruca contra el muro,</span>
-          <span class="line">se queda quieto como yo.</span>
-          <span class="line">Doy un paso, me ve, ya ha huido,</span>
-          <span class="line-em">respiro la brisa, pienso en ti.</span>
-        </div>
-      </div>
-
-      <div class="lyric-section">
-        <div class="lyric-lines">
-          <span class="line">No, qué soy ahora no lo sé,</span>
-          <span class="line">soy un hombre, un hombre en busca de sí mismo.</span>
-          <span class="line">No, qué soy ahora no lo sé,</span>
-          <span class="line">estoy solo, solo el sonido de mi paso.</span>
-        </div>
-      </div>
-
-      <div class="lyric-section cierre">
-        <div class="lyric-lines">
-          <span class="line">Y mientras tanto el sol ya filtra entre las ramas:</span>
-          <span class="line">el día, como siempre, será.</span>
+      <div class="lyric-section cierre instrumental">
+        <div class="lyric-section-label">Outro</div>
+        <span class="instrumental-note">Caracol y teponaztli desvaneciéndose</span>
+        <div class="lyric-lines" style="border-left:none; padding-left:0; text-align:center; margin-top:1.25rem;">
+          <span class="line">Citlali… citlali… tlanextia…</span>
+          <span class="line-trad">Estrella… estrella… ilumina…</span>
         </div>
       </div>
 
@@ -349,9 +412,9 @@
     <div class="lyric-divider"></div>
 
     <div class="track-nav">
-      <a href="CA1_T05_HASTA_LA_ULTIMA_NOTA.html">← Track 05: Hasta la Última Nota</a>
+      <a href="CA1_T06_SEPTIEMBRE.html">← Track 06: Septiembre</a>
       <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html">↑ Anáhuac Ikal</a>
-      <a href="CA1_T07_TEOTLAC_CITLALI.html">Track 07: Teotlac Citlali →</a>
+      <a href="CA1_T08_ESTRELLA_DE_LA_TARDE.html">Track 08: Estrella de la Tarde →</a>
     </div>
 
     <div class="lyric-footer">

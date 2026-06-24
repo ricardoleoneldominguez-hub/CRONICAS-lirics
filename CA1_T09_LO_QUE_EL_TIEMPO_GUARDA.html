@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estrella de la Tarde — Letra | Crónicas del Anáhuac · RLD ENSEMBLE</title>
-  <meta name="description" content="Letra de Estrella de la Tarde — Track 07 de Anáhuac Ikal. Crónicas del Anáhuac · RLD ENSEMBLE.">
+  <title>Lo que el Tiempo Guarda (Kauitl) — Letra | Crónicas del Anáhuac · RLD ENSEMBLE</title>
+  <meta name="description" content="Letra de Lo que el Tiempo Guarda (Kauitl) — Track 09 de Anáhuac Ikal. Crónicas del Anáhuac · RLD ENSEMBLE.">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
 
@@ -22,7 +22,6 @@
       --accent:   #c47a1e;
       --ocre:     #c47a1e;
       --verde:    #2d6b3a;
-      --azul:     #1a4a6b;
       --tierra:   #6b3a1a;
       --font-display: 'Playfair Display', serif;
       --font-body:    'Outfit', sans-serif;
@@ -96,7 +95,7 @@
     .breadcrumb .sep { color: var(--border); }
 
     .lyric-header {
-      border-left: 5px solid var(--ocre);
+      border-left: 5px solid var(--tierra);
       padding-left: 1.5rem;
       margin-bottom: 2.5rem;
     }
@@ -105,16 +104,24 @@
       font-size: 0.58rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--ocre);
+      color: var(--tierra);
       margin-bottom: 0.5rem;
     }
     .lyric-title {
       font-family: var(--font-display);
       font-weight: 900;
-      font-size: clamp(2rem, 5vw, 3rem);
-      line-height: 1;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      line-height: 1.1;
       letter-spacing: -0.02em;
       color: var(--black);
+      margin-bottom: 0.25rem;
+    }
+    .lyric-subtitle {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      color: var(--tierra);
+      text-transform: uppercase;
       margin-bottom: 0.4rem;
     }
     .lyric-artist {
@@ -141,8 +148,8 @@
       background: var(--surface);
     }
     .lyric-tag.lang  { border-color: var(--accent); color: var(--accent); }
-    .lyric-tag.lang2 { border-color: var(--verde);  color: var(--verde);  }
-    .lyric-tag.album { border-color: var(--tierra);  color: var(--tierra); }
+    .lyric-tag.lang2 { border-color: var(--tierra);  color: var(--tierra); }
+    .lyric-tag.album { border-color: var(--verde);   color: var(--verde);  }
 
     .lyric-divider { height: 1px; background: var(--border); margin: 2rem 0; }
 
@@ -167,10 +174,11 @@
       display: inline-block;
     }
 
+    /* Línea normal */
     .lyric-lines {
       font-family: var(--font-display);
       font-size: 1.05rem;
-      line-height: 2;
+      line-height: 2.1;
       color: var(--dark);
       padding-left: 0.5rem;
       border-left: 2px solid var(--panel);
@@ -178,80 +186,60 @@
     .lyric-lines .line     { display: block; }
     .lyric-lines .line-em  { display: block; font-style: italic; color: var(--gray); }
 
-    /* Pre-Coro — azul */
-    .lyric-section.precoro .lyric-lines {
-      border-left: 3px solid var(--azul);
-      padding-left: 1rem;
-      background: rgba(26,74,107,0.05);
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
+    /* Palabra náhuatl inline con glosa */
+    .nahuatl {
+      font-style: italic;
+      color: var(--tierra);
+      font-weight: 700;
     }
-    .lyric-section.precoro .lyric-section-label { color: var(--azul); }
-    .lyric-section.precoro .lyric-section-label::before { background: var(--azul); }
+    .nahuatl-glosa {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
 
-    /* Coro — ocre dorado */
+    /* Coro — ocre + náhuatl destacado */
     .lyric-section.coro .lyric-lines {
       border-left: 3px solid var(--ocre);
       padding-left: 1rem;
-      background: rgba(196,122,30,0.07);
+      background: rgba(196,122,30,0.06);
       padding-top: 0.75rem;
       padding-bottom: 0.75rem;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
     }
     .lyric-section.coro .lyric-section-label { color: var(--ocre); }
 
-    /* Puente multilingüe — verde jade, con voces diferenciadas */
-    .lyric-section.puente .lyric-lines {
-      border-left: 3px solid var(--verde);
-      padding-left: 1rem;
-      background: rgba(45,107,58,0.05);
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
-    }
-    .lyric-section.puente .lyric-section-label { color: var(--verde); }
-    .lyric-section.puente .lyric-section-label::before { background: var(--verde); }
-
-    .lang-line {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      margin-bottom: 0.4rem;
-      flex-wrap: wrap;
-    }
-    .lang-text {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      color: var(--dark);
-    }
-    .lang-note {
-      font-family: var(--font-mono);
-      font-size: 0.55rem;
-      letter-spacing: 0.15em;
-      color: var(--verde);
-      opacity: 0.7;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    /* Coro final — más oscuro */
+    /* Coro final — tierra + eco */
     .lyric-section.coro-final .lyric-lines {
       border-left: 4px solid var(--tierra);
       padding-left: 1rem;
       background: rgba(107,58,26,0.07);
       padding-top: 0.75rem;
       padding-bottom: 0.75rem;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
     }
     .lyric-section.coro-final .lyric-section-label { color: var(--tierra); }
     .lyric-section.coro-final .lyric-section-label::before { background: var(--tierra); }
 
-    /* Outro */
-    .lyric-section.outro { text-align: center; }
-    .lyric-section.outro .lyric-section-label {
-      justify-content: center;
+    /* Puente — verde, hablado */
+    .lyric-section.puente .lyric-lines {
+      border-left: 3px solid var(--verde);
+      padding-left: 1rem;
+      background: rgba(45,107,58,0.05);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
     }
-    .lyric-section.outro .lyric-section-label::before { display: none; }
-    .outro-note {
+    .lyric-section.puente .lyric-section-label { color: var(--verde); }
+    .lyric-section.puente .lyric-section-label::before { background: var(--verde); }
+
+    /* Instrumental */
+    .lyric-section.instrumental { text-align: center; }
+    .lyric-section.instrumental .lyric-section-label { justify-content: center; }
+    .lyric-section.instrumental .lyric-section-label::before { display: none; }
+    .instrumental-note {
       font-family: var(--font-mono);
       font-size: 0.68rem;
       letter-spacing: 0.1em;
@@ -274,7 +262,7 @@
       font-size: 0.6rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--verde);
+      color: var(--tierra);
       margin-bottom: 1rem;
       display: flex;
       align-items: center;
@@ -283,14 +271,14 @@
     .glosario-title::before {
       content: '';
       width: 16px; height: 2px;
-      background: var(--verde);
+      background: var(--tierra);
       display: inline-block;
     }
     .glosario-item {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 140px 1fr;
       gap: 0.5rem 1.5rem;
-      padding: 0.6rem 0;
+      padding: 0.75rem 0;
       border-bottom: 1px solid var(--border);
       align-items: start;
     }
@@ -298,21 +286,20 @@
     .glosario-word {
       font-family: var(--font-display);
       font-style: italic;
-      font-size: 0.95rem;
-      color: var(--dark);
+      font-size: 1rem;
+      color: var(--tierra);
       font-weight: 700;
-    }
-    .glosario-lang {
-      font-family: var(--font-mono);
-      font-size: 0.55rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--verde);
     }
     .glosario-def {
       font-family: var(--font-body);
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       color: var(--gray);
+      line-height: 1.6;
+    }
+    .glosario-def em {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--dark);
     }
 
     .track-nav {
@@ -366,20 +353,19 @@
       <span class="sep">·</span>
       <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html">Anáhuac Ikal</a>
       <span class="sep">·</span>
-      <span>Track 07</span>
+      <span>Track 09</span>
     </div>
 
     <div class="lyric-header">
-      <p class="lyric-eyebrow">Crónicas del Anáhuac · Álbum 01 · Track 07</p>
-      <h1 class="lyric-title">Estrella de la Tarde</h1>
+      <p class="lyric-eyebrow">Crónicas del Anáhuac · Álbum 01 · Track 09</p>
+      <h1 class="lyric-title">Lo que el Tiempo Guarda</h1>
+      <p class="lyric-subtitle">Kauitl</p>
       <p class="lyric-artist">RLD ENSEMBLE</p>
     </div>
 
     <div class="lyric-meta">
       <span class="lyric-tag lang">Español</span>
       <span class="lyric-tag lang2">Náhuatl</span>
-      <span class="lyric-tag lang2">Tz'utujil</span>
-      <span class="lyric-tag lang2">Ch'orti' Maya</span>
       <span class="lyric-tag album">Álbum: Anáhuac Ikal</span>
     </div>
 
@@ -390,102 +376,130 @@
       <div class="lyric-section">
         <div class="lyric-section-label">Verso 1</div>
         <div class="lyric-lines">
-          <span class="line">Estrella de la tarde</span>
-          <span class="line">cuéntame por qué te has ido</span>
-          <span class="line">cuenta que por qué nos has dejado</span>
-          <span class="line">es que encontraste un paraíso diferente al nuestro</span>
+          <span class="line">Tal vez no supe mirar</span>
+          <span class="line">lo que estaba delante</span>
+          <span class="line">sin nombre, sin forma</span>
+          <span class="line">solo… <span class="nahuatl">kauitl</span></span>
         </div>
       </div>
 
-      <div class="lyric-section precoro">
-        <div class="lyric-section-label">Pre-Coro</div>
+      <div class="lyric-section">
         <div class="lyric-lines">
-          <span class="line">es que acaso encontraste un propósito nuevo</span>
-          <span class="line-em">o será simplemente que nos has olvidado</span>
+          <span class="line">El tiempo que pasa</span>
+          <span class="line">no borra, transforma</span>
+          <span class="line">lo que no dijimos</span>
+          <span class="line">quedó en el viento — <span class="nahuatl">ehecatl</span></span>
         </div>
       </div>
 
       <div class="lyric-section coro">
         <div class="lyric-section-label">Coro</div>
         <div class="lyric-lines">
-          <span class="line">Estrella de la tarde</span>
-          <span class="line">nuestra gente te extraña</span>
-          <span class="line">estrella de la tarde</span>
-          <span class="line">nuestra gente te añora</span>
+          <span class="line">Pero aquí estamos</span>
+          <span class="line">después de todo lo que fue</span>
+          <span class="line"><span class="nahuatl">ixtli yollotl</span></span>
+          <span class="line-em">rostro y corazón, al fin</span>
         </div>
       </div>
 
       <div class="lyric-section">
         <div class="lyric-section-label">Verso 2</div>
         <div class="lyric-lines">
-          <span class="line">pero en mi corazón alberga</span>
-          <span class="line">una tenue esperanza que en un día a futuro</span>
-          <span class="line-em">es nuevamente nuestras tierras</span>
+          <span class="line">Quizás fui de piedra</span>
+          <span class="line">cuando debí ser agua</span>
+          <span class="line">quizás fui silencio</span>
+          <span class="line">cuando debí hablar</span>
+        </div>
+      </div>
+
+      <div class="lyric-section">
+        <div class="lyric-lines">
+          <span class="line">Lo que hice o deshice</span>
+          <span class="line">ya vive en el <span class="nahuatl">tonalli</span></span>
+          <span class="line">no en mis manos</span>
+          <span class="line">sino en lo que somos</span>
+        </div>
+      </div>
+
+      <div class="lyric-section coro">
+        <div class="lyric-section-label">Coro</div>
+        <div class="lyric-lines">
+          <span class="line">Pero aquí estamos</span>
+          <span class="line">después de todo lo que fue</span>
+          <span class="line"><span class="nahuatl">ixtli yollotl</span></span>
+          <span class="line-em">rostro y corazón, al fin</span>
         </div>
       </div>
 
       <div class="lyric-section puente">
-        <div class="lyric-section-label">Puente — Multilingüe</div>
+        <div class="lyric-section-label">Puente — más lento, casi hablado</div>
         <div class="lyric-lines">
-          <div class="lang-line">
-            <span class="lang-text">Teotlac citlali</span>
-            <span class="lang-note">Náhuatl · susurrado</span>
-          </div>
-          <div class="lang-line">
-            <span class="lang-text">Q'ij ruch'umil</span>
-            <span class="lang-note">Tz'utujil · armonía suave</span>
-          </div>
-          <div class="lang-line">
-            <span class="lang-text">Ikʼ tz'unun eekʼ</span>
-            <span class="lang-note">Ch'orti' Maya · eco gentil</span>
-          </div>
+          <span class="line">No pregunto por qué</span>
+          <span class="line">ni busco otra respuesta</span>
+          <span class="line">el origen es claro —</span>
+          <span class="line"><span class="nahuatl">neluayotl</span></span>
         </div>
+      </div>
+
+      <div class="lyric-section puente">
+        <div class="lyric-lines">
+          <span class="line">Todo lo que existe</span>
+          <span class="line">ya existía en la semilla</span>
+          <span class="line">antes del primer día</span>
+          <span class="line-em">antes del primer sol</span>
+        </div>
+      </div>
+
+      <div class="lyric-section instrumental">
+        <div class="lyric-section-label">Solo Instrumental</div>
+        <span class="instrumental-note">[ Moog + quena ]</span>
       </div>
 
       <div class="lyric-section coro-final">
-        <div class="lyric-section-label">Coro Final</div>
+        <div class="lyric-section-label">Coro Final — con eco</div>
         <div class="lyric-lines">
-          <span class="line">Estrella de la tarde</span>
-          <span class="line">nuestra gente te extraña</span>
-          <span class="line">pero la esperanza vive</span>
-          <span class="line-em">en nuestras tierras</span>
+          <span class="line">Pero aquí estamos</span>
+          <span class="line">después de todo lo que fue</span>
+          <span class="line"><span class="nahuatl">ixtli yollotl</span></span>
+          <span class="line">rostro y corazón</span>
+          <span class="line-em">desde siempre… <span class="nahuatl">neluayotl</span></span>
         </div>
-      </div>
-
-      <div class="lyric-section outro">
-        <div class="lyric-section-label">Outro</div>
-        <span class="outro-note">[ Marimba y flauta en desvanecimiento gradual,<br>como una estrella que se apaga. ]</span>
       </div>
 
     </div>
 
     <div class="lyric-divider"></div>
 
-    <!-- GLOSARIO MULTILINGÜE -->
+    <!-- GLOSARIO NÁHUATL -->
     <div class="glosario">
-      <div class="glosario-title">Glosario — Lenguas Mesoamericanas</div>
+      <div class="glosario-title">Glosario — Náhuatl</div>
 
       <div class="glosario-item">
-        <span class="glosario-word">Teotlac citlali</span>
-        <span class="glosario-lang">Náhuatl</span>
-        <span class="glosario-def">Estrella de la tarde / estrella vespertina</span>
+        <span class="glosario-word">kauitl</span>
+        <span class="glosario-def"><em>Tiempo.</em> El tiempo como entidad viva, no como medida.</span>
       </div>
       <div class="glosario-item">
-        <span class="glosario-word">Q'ij ruch'umil</span>
-        <span class="glosario-lang">Tz'utujil</span>
-        <span class="glosario-def">El sol y su estrella / la luz del día</span>
+        <span class="glosario-word">ehecatl</span>
+        <span class="glosario-def"><em>Viento.</em> También nombre del dios del viento Ehécatl-Quetzalcóatl.</span>
       </div>
       <div class="glosario-item">
-        <span class="glosario-word">Ikʼ tz'unun eekʼ</span>
-        <span class="glosario-lang">Ch'orti' Maya</span>
-        <span class="glosario-def">Luna, colibrí oscuro / espíritu nocturno</span>
+        <span class="glosario-word">ixtli yollotl</span>
+        <span class="glosario-def"><em>El rostro y el corazón.</em> Expresión filosófica náhuatl que designa la identidad completa de una persona — lo que muestra al mundo y lo que siente por dentro.</span>
+      </div>
+      <div class="glosario-item">
+        <span class="glosario-word">tonalli</span>
+        <span class="glosario-def"><em>Energía vital / alma.</em> El destino o signo de nacimiento de una persona; su fuerza solar interior.</span>
+      </div>
+      <div class="glosario-item">
+        <span class="glosario-word">neluayotl</span>
+        <span class="glosario-def"><em>Raíz, fundamento, principio.</em> La base de todo lo que es — origen y esencia.</span>
       </div>
     </div>
 
     <div class="track-nav">
-      <a href="CA1_T06_SEPTIEMBRE.html">← Track 06: SEPTIEMBRE</a>
+      <a href="CA1_T08_ESTRELLA_DE_LA_TARDE.html">← Track 08: Estrella de la Tarde</a>
       <a href="https://rldstudio.net/cronicas-del-anahuac/anahuac.html">↑ Anáhuac Ikal</a>
-      <a href="CA1_T08_LO_QUE_EL_TIEMPO_GUARDA.html">Track 08: Lo que el Tiempo Guarda →</a>
+      <a href="CA1_T10_LOS_HIJOS_DEL_VIENTO.html">Track 10: Los Hijos del Viento →</a>
     </div>
 
     <div class="lyric-footer">
