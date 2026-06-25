@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La noche al fin… — Letra | Crónicas del Anáhuac · RLD ENSEMBLE</title>
+  <meta name="description" content="Letra de La noche al fin… — Track 04 de Duendes y Brujas. Crónicas del Anáhuac · RLD ENSEMBLE.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #f7f2e8;
+      --surface:  #fffcf5;
+      --panel:    #f0e8d0;
+      --border:   #d4c49a;
+      --muted:    #7a6a4f;
+      --gray:     #4a3f2f;
+      --dark:     #1e1508;
+      --black:    #120e04;
+      --accent:   #c47a1e;
+      --verde:    #2d6b3a;
+      --azul:     #1a4a6b;
+      --font-display: 'Playfair Display', serif;
+      --font-body:    'Outfit', sans-serif;
+      --font-mono:    'DM Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 56px;
+      background: rgba(247,242,232,0.97);
+      border-bottom: 2px solid var(--dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .top-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .top-nav a:hover { color: var(--accent); }
+    .top-nav .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      color: var(--black);
+      text-transform: uppercase;
+    }
+    .top-nav .nav-logo span { color: var(--accent); }
+
+    .lyric-page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    .breadcrumb {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--dark); }
+    .breadcrumb .sep { color: var(--border); }
+
+    .lyric-header {
+      border-left: 5px solid var(--azul);
+      padding-left: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .lyric-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--azul);
+      margin-bottom: 0.5rem;
+    }
+    .lyric-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 0.4rem;
+    }
+    .lyric-artist {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    .lyric-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .lyric-tag {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border: 1.5px solid var(--border);
+      color: var(--gray);
+      background: var(--surface);
+    }
+    .lyric-tag.lang { border-color: var(--accent); color: var(--accent); }
+    .lyric-tag.album { border-color: var(--verde); color: var(--verde); }
+
+    .lyric-divider { height: 1px; background: var(--border); margin: 2rem 0; }
+
+    .lyric-section { margin-bottom: 2rem; }
+
+    .lyric-section-label {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .lyric-section-label::before {
+      content: '';
+      width: 16px;
+      height: 2px;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    .lyric-lines {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      line-height: 2;
+      color: var(--dark);
+      padding-left: 0.5rem;
+      border-left: 2px solid var(--panel);
+    }
+    .lyric-lines .line { display: block; }
+    .lyric-lines .line-question {
+      display: block;
+      font-style: italic;
+      color: var(--gray);
+    }
+
+    /* Pre-Coro — azul nocturno */
+    .lyric-section.precoro .lyric-lines {
+      border-left: 3px solid var(--azul);
+      padding-left: 1rem;
+      background: rgba(26,74,107,0.05);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .lyric-section.precoro .lyric-section-label { color: var(--azul); }
+    .lyric-section.precoro .lyric-section-label::before { background: var(--azul); }
+
+    /* Coro — verde */
+    .lyric-section.coro .lyric-lines {
+      border-left: 3px solid var(--verde);
+      padding-left: 1rem;
+      background: rgba(45,107,58,0.05);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .lyric-section.coro .lyric-section-label { color: var(--verde); }
+    .lyric-section.coro .lyric-section-label::before { background: var(--verde); }
+
+    /* Puente — ocre */
+    .lyric-section.puente .lyric-lines {
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+      background: rgba(196,122,30,0.05);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    /* Outro */
+    .lyric-section.outro .lyric-lines {
+      border-left: 2px solid var(--muted);
+      color: var(--gray);
+      font-style: italic;
+    }
+
+    .track-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-top: 2px solid var(--dark);
+      margin-top: 3rem;
+    }
+    .track-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dark);
+      text-decoration: none;
+      border: 1.5px solid var(--dark);
+      padding: 0.5rem 1rem;
+      transition: all 0.2s;
+    }
+    .track-nav a:hover { background: var(--dark); color: var(--bg); }
+
+    .lyric-footer {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+    .lyric-footer p {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="https://rldstudio.net/cronicas-del-anahuac/" class="nav-logo">RLD <span>Studio</span></a>
+    <a href="https://rldstudio.net/cronicas-del-anahuac/duendes-y-brujas.html">← Volver a Duendes y Brujas</a>
+  </nav>
+
+  <div class="lyric-page">
+
+    <div class="breadcrumb">
+      <a href="https://rldstudio.net/cronicas-del-anahuac/">Crónicas del Anáhuac</a>
+      <span class="sep">·</span>
+      <a href="https://rldstudio.net/cronicas-del-anahuac/duendes-y-brujas.html">Duendes y Brujas</a>
+      <span class="sep">·</span>
+      <span>Track 04</span>
+    </div>
+
+    <div class="lyric-header">
+      <p class="lyric-eyebrow">Crónicas del Anáhuac · Álbum 02 · Track 04</p>
+      <h1 class="lyric-title">La noche al fin…</h1>
+      <p class="lyric-artist">RLD ENSEMBLE</p>
+    </div>
+
+    <div class="lyric-meta">
+      <span class="lyric-tag lang">Español</span>
+      <span class="lyric-tag album">Álbum: Duendes y Brujas</span>
+    </div>
+
+    <div class="lyric-divider"></div>
+
+    <div class="lyric-body">
+
+      <div class="lyric-section">
+        <div class="lyric-section-label">Verso 1</div>
+        <div class="lyric-lines">
+          <span class="line">La noche se hace ancha y generosa</span>
+          <span class="line">Mi sombra en la pared ya no es prisión</span>
+          <span class="line">Entre luces que titilan desde lejos</span>
+          <span class="line">Hay un eco que me llama por mi nombre</span>
+          <span class="line-question">¿Qué será de todo lo que aún no empieza?</span>
+          <span class="line-question">¿Qué caminos florecerán al alba?</span>
+          <span class="line">El silencio ya no pesa, ahora es tela</span>
+          <span class="line">Donde tejo mi siguiente decisión</span>
+        </div>
+      </div>
+
+      <div class="lyric-section precoro">
+        <div class="lyric-section-label">Pre-Coro</div>
+        <div class="lyric-lines">
+          <span class="line">Y el cuerpo suelta lo que sobra</span>
+          <span class="line">Entre lo que muere y lo que vendrá</span>
+        </div>
+      </div>
+
+      <div class="lyric-section coro">
+        <div class="lyric-section-label">Coro</div>
+        <div class="lyric-lines">
+          <span class="line">En la noche clara todo puede más</span>
+          <span class="line">Los miedos callan, el instinto está</span>
+          <span class="line">Afilándose en el borde del asombro</span>
+          <span class="line">Como un mapa que se enciende al caminar</span>
+          <span class="line">Entre mañanas rotas y promesas nuevas</span>
+          <span class="line">Entre el "me rindo" y el "vuelvo a empezar"</span>
+          <span class="line">La oscuridad ya no es una trinchera</span>
+          <span class="line">Es el pulso que me empuja hacia adelante</span>
+        </div>
+      </div>
+
+      <div class="lyric-section">
+        <div class="lyric-section-label">Verso 2</div>
+        <div class="lyric-lines">
+          <span class="line">Hay un brillo que nace desde adentro</span>
+          <span class="line">Cada pausa se transforma en libertad</span>
+          <span class="line">Y aunque el vértigo todavía juega sucio</span>
+          <span class="line">Algo firme empieza a germinar</span>
+          <span class="line">Las dudas van perdiendo su armadura</span>
+          <span class="line">La noche ya no es hora de esperar</span>
+          <span class="line">Lo que ayer fue muro sin ventanas</span>
+          <span class="line">Hoy se vuelve puerta sin final</span>
+        </div>
+      </div>
+
+      <div class="lyric-section precoro">
+        <div class="lyric-section-label">Pre-Coro</div>
+        <div class="lyric-lines">
+          <span class="line">Y me reconcilio con el riesgo</span>
+          <span class="line">La noche me viene a despertar</span>
+        </div>
+      </div>
+
+      <div class="lyric-section coro">
+        <div class="lyric-section-label">Coro</div>
+        <div class="lyric-lines">
+          <span class="line">En la noche clara todo puede más</span>
+          <span class="line">Las voces falsas dejan de mandar</span>
+          <span class="line">El cansancio se deshace como espuma</span>
+          <span class="line">Y las piernas quieren soltarse a bailar</span>
+          <span class="line">Entre lo que huye y lo que apenas llega</span>
+          <span class="line">Entre el "no quiero" y el "quiero intentar"</span>
+          <span class="line">La oscuridad se vuelve territorio fértil</span>
+          <span class="line">Justo antes de que el día quiera entrar</span>
+        </div>
+      </div>
+
+      <div class="lyric-section puente">
+        <div class="lyric-section-label">Puente</div>
+        <div class="lyric-lines">
+          <span class="line">No caminas solo hacia ese fuego</span>
+          <span class="line">Somos tantos los que elegimos</span>
+          <span class="line">La noche como inicio no como final</span>
+          <span class="line">Despertarnos antes de que pida permiso el sol</span>
+        </div>
+      </div>
+
+      <div class="lyric-section coro">
+        <div class="lyric-section-label">Coro Final</div>
+        <div class="lyric-lines">
+          <span class="line">En la noche clara todo puede ser</span>
+          <span class="line">El vértigo o la fuerza para crecer</span>
+          <span class="line">Y cuando el sol atraviese la ventana</span>
+          <span class="line">Recordarás que la noche no te obligó a esconderte</span>
+          <span class="line">Que pudiste despertar a tiempo</span>
+        </div>
+      </div>
+
+      <div class="lyric-section outro">
+        <div class="lyric-section-label">Outro</div>
+        <div class="lyric-lines">
+          <span class="line">Ya respira el día</span>
+          <span class="line">Pero la noche me dejó su ritmo.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="lyric-divider"></div>
+
+    <div class="track-nav">
+      <a href="CA2_T03_MIS_ANGELES_Y_DEMONIOS.html">← Track 03: Mis Ángeles y mis Demonios</a>
+      <a href="https://rldstudio.net/cronicas-del-anahuac/duendes-y-brujas.html">↑ Duendes y Brujas</a>
+      <a href="CA2_T05_LA_NINFA_EL_DUENDE_Y_YO.html">Track 05: La Ninfa, el Duende y Yo →</a>
+    </div>
+
+    <div class="lyric-footer">
+      <p>RLD ENSEMBLE · Crónicas del Anáhuac · © 2026 RLD Studio</p>
+      <p style="margin-top:0.4rem;">somos@rldstudio.net</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

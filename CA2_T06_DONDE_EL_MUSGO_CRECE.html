@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donde el Musgo Crece — Letra | Crónicas del Anáhuac · RLD ENSEMBLE</title>
+  <meta name="description" content="Letra de Donde el Musgo Crece — Track 06 de Duendes y Brujas. Crónicas del Anáhuac · RLD ENSEMBLE.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #f7f2e8;
+      --surface:  #fffcf5;
+      --panel:    #f0e8d0;
+      --border:   #d4c49a;
+      --muted:    #7a6a4f;
+      --gray:     #4a3f2f;
+      --dark:     #1e1508;
+      --black:    #120e04;
+      --accent:   #c47a1e;
+      --verde:    #2d6b3a;
+      --font-display: 'Playfair Display', serif;
+      --font-body:    'Outfit', sans-serif;
+      --font-mono:    'DM Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      height: 56px;
+      background: rgba(247,242,232,0.97);
+      border-bottom: 2px solid var(--dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .top-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .top-nav a:hover { color: var(--accent); }
+    .top-nav .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      color: var(--black);
+      text-transform: uppercase;
+    }
+    .top-nav .nav-logo span { color: var(--accent); }
+
+    .lyric-page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    .breadcrumb {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--dark); }
+    .breadcrumb .sep { color: var(--border); }
+
+    .lyric-header {
+      border-left: 5px solid var(--verde);
+      padding-left: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .lyric-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--verde);
+      margin-bottom: 0.5rem;
+    }
+    .lyric-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 0.4rem;
+    }
+    .lyric-artist {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    .lyric-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .lyric-tag {
+      font-family: var(--font-mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border: 1.5px solid var(--border);
+      color: var(--gray);
+      background: var(--surface);
+    }
+    .lyric-tag.lang { border-color: var(--accent); color: var(--accent); }
+    .lyric-tag.album { border-color: var(--verde); color: var(--verde); }
+
+    .lyric-divider { height: 1px; background: var(--border); margin: 2rem 0; }
+
+    .lyric-intro {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      padding: 0.75rem 1.25rem;
+      border-left: 3px solid var(--border);
+      background: rgba(212,196,154,0.15);
+    }
+
+    .lyric-section { margin-bottom: 2rem; }
+
+    .lyric-section-label {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .lyric-section-label::before {
+      content: '';
+      width: 16px;
+      height: 2px;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    .lyric-lines {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      line-height: 2;
+      color: var(--dark);
+      padding-left: 0.5rem;
+      border-left: 2px solid var(--panel);
+    }
+    .lyric-lines .line { display: block; }
+    .lyric-lines .line-aside {
+      display: block;
+      font-style: italic;
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+    .lyric-lines .line-spoken {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+      padding-left: 1rem;
+    }
+
+    .lyric-section.coro .lyric-lines {
+      border-left: 3px solid var(--verde);
+      padding-left: 1rem;
+      background: rgba(45,107,58,0.05);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .lyric-section.coro .lyric-section-label { color: var(--verde); }
+    .lyric-section.coro .lyric-section-label::before { background: var(--verde); }
+
+    .lyric-section.puente .lyric-lines {
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+      background: rgba(196,122,30,0.05);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .lyric-section.outro .lyric-lines {
+      border-left: 2px solid var(--muted);
+      color: var(--gray);
+      font-style: italic;
+    }
+
+    .track-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-top: 2px solid var(--dark);
+      margin-top: 3rem;
+    }
+    .track-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dark);
+      text-decoration: none;
+      border: 1.5px solid var(--dark);
+      padding: 0.5rem 1rem;
+      transition: all 0.2s;
+    }
+    .track-nav a:hover { background: var(--dark); color: var(--bg); }
+
+    .lyric-footer {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+    .lyric-footer p {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="https://rldstudio.net/cronicas-del-anahuac/" class="nav-logo">RLD <span>Studio</span></a>
+    <a href="https://rldstudio.net/cronicas-del-anahuac/duendes-y-brujas.html">← Volver a Duendes y Brujas</a>
+  </nav>
+
+  <div class="lyric-page">
+
+    <div class="breadcrumb">
+      <a href="https://rldstudio.net/cronicas-del-anahuac/">Crónicas del Anáhuac</a>
+      <span class="sep">·</span>
+      <a href="https://rldstudio.net/cronicas-del-anahuac/duendes-y-brujas.html">Duendes y Brujas</a>
+      <span class="sep">·</span>
+      <span>Track 06</span>
+    </div>
+
+    <div class="lyric-header">
+      <p class="lyric-eyebrow">Crónicas del Anáhuac · Álbum 02 · Track 06</p>
+      <h1 class="lyric-title">Donde el Musgo Crece</h1>
+      <p class="lyric-artist">RLD ENSEMBLE</p>
+    </div>
+
+    <div class="lyric-meta">
+      <span class="lyric-tag lang">Español</span>
+      <span class="lyric-tag album">Álbum: Duendes y Brujas</span>
+    </div>
+
+    <div class="lyric-divider"></div>
+
+    <div class="lyric-intro">
+      (Susurrado) Un hada… un duende…
+    </div>
+
+    <div class="lyric-body">
+
+      <div class="lyric-section">
+        <div class="lyric-section-label">Verso 1</div>
+        <div class="lyric-lines">
+          <span class="line">Donde caen rayos de luna entre helechos</span>
+          <span class="line">Contaba gotas de rocío, una por una</span>
+          <span class="line">Él tropezó por el pasillo de cedros</span>
+          <span class="line">Sombra de duende, aún medio sol</span>
+          <span class="line">Su capa roja, su traje verde</span>
+          <span class="line">La criatura más rara que he visto</span>
+          <span class="line">Me escondí tras una campana de dedalera</span>
+          <span class="line-aside">"Esto no terminará bien, no terminará bien"</span>
+        </div>
+      </div>
+
+      <div class="lyric-section coro">
+        <div class="lyric-section-label">Coro</div>
+        <div class="lyric-lines">
+          <span class="line">Pero oh, el bosque sabe más que nosotros</span>
+          <span class="line">Dos clases distintas de misterio</span>
+          <span class="line">Él me mostró cuevas, yo le enseñé abejas</span>
+          <span class="line">Un hada y un duende – amigos bajo los árboles</span>
+        </div>
+      </div>
+
+      <div class="lyric-section">
+        <div class="lyric-section-label">Verso 2</div>
+        <div class="lyric-lines">
+          <span class="line">Ella brillaba como un reloj roto</span>
+          <span class="line">Demasiado frágil para estas rocas y musgo</span>
+          <span class="line-aside">Pensé: "Correrá, se burlará, hablará"</span>
+          <span class="line">Pero entonces rió – y la luz se desparramó</span>
+          <span class="line-aside">"Tú cavas piedras, yo hilo el aire"</span>
+          <span class="line">Ella curó un ala, yo arreglé una trampa</span>
+          <span class="line">Ambos habíamos perdido una forma de confiar</span>
+          <span class="line">Y la encontramos volviendo polvo en polvo</span>
+        </div>
+      </div>
+
+      <div class="lyric-section coro">
+        <div class="lyric-section-label">Coro</div>
+        <div class="lyric-lines">
+          <span class="line">Pero oh, el bosque sabe más que nosotros</span>
+          <span class="line">Dos clases distintas de misterio</span>
+          <span class="line">Él me mostró cuevas, yo le enseñé abejas</span>
+          <span class="line">Un hada y un duende – amigos bajo los árboles</span>
+        </div>
+      </div>
+
+      <div class="lyric-section puente">
+        <div class="lyric-section-label">Puente</div>
+        <div class="lyric-lines">
+          <span class="line">Dicen que un hada confía en el rocío</span>
+          <span class="line">Un duende confía en la raíz</span>
+          <span class="line">Pero qué es una duda cuando el musgo puede sostener</span>
+          <span class="line">Una historia que nadie pudo contar?</span>
+          <span class="line-spoken">(Pausa)</span>
+          <span class="line-spoken">El bosque susurra:</span>
+          <span class="line-aside">"No estás solo – ni tú, ni tú"</span>
+        </div>
+      </div>
+
+      <div class="lyric-section coro">
+        <div class="lyric-section-label">Coro Final</div>
+        <div class="lyric-lines">
+          <span class="line">Y ahora el bosque nos pertenece</span>
+          <span class="line">Dos clases distintas de misterio</span>
+          <span class="line">Donde la luna encuentra a la tierra, donde el fuego encuentra al arroyo</span>
+          <span class="line">Un hada y un duende – despertando de un sueño</span>
+        </div>
+      </div>
+
+      <div class="lyric-section outro">
+        <div class="lyric-section-label">Outro</div>
+        <div class="lyric-lines">
+          <span class="line">Ella dejó una pluma en su piedra</span>
+          <span class="line">Él talló su nombre en un hueso de hongo</span>
+          <span class="line">Y aunque dudaron al empezar…</span>
+          <span class="line">…todavía son amigos…</span>
+          <span class="line">…en el bosque al despertar.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="lyric-divider"></div>
+
+    <div class="track-nav">
+      <a href="CA2_T05_LA_NINFA_EL_DUENDE_Y_YO.html">← Track 05: La Ninfa, el Duende y Yo</a>
+      <a href="https://rldstudio.net/cronicas-del-anahuac/duendes-y-brujas.html">↑ Duendes y Brujas</a>
+    </div>
+
+    <div class="lyric-footer">
+      <p>RLD ENSEMBLE · Crónicas del Anáhuac · © 2026 RLD Studio</p>
+      <p style="margin-top:0.4rem;">somos@rldstudio.net</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
